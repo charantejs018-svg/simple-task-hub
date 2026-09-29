@@ -1,29 +1,18 @@
-# Welcome to your Lovable project
+# TaskFlow — Task Management App
 
-This project was built with [Lovable](https://lovable.dev).
+A simple task manager with login/registration. All data is stored in your browser (localStorage) — no database, API keys or backend setup needed.
 
-## Build with Lovable
+## Local setup
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+1. Download the project
+2. Open the project folder in VS Code or Antigravity
+3. Open Terminal
+4. Run: npm install
+5. Run: npm run dev
+6. Open the localhost URL shown in the terminal
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## Where things live
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- `src/routes/` — pages (login, register, dashboard)
+- `src/components/` — Navbar, Sidebar, TaskCard, TaskForm, ProtectedRoute, Modal
+- `src/utils/storage.ts` — localStorage helpers (`users`, `currentUser`, `tasks_<userId>`)
