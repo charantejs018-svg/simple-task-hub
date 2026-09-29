@@ -13,11 +13,11 @@ export function TaskForm({ initial, onSubmit, onCancel }: { initial?: Task; onSu
     status: initial?.status ?? "Pending",
     dueDate: initial?.dueDate ?? "",
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<{ title?: string; dueDate?: string }>({});
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    const errs: Record<string, string> = {};
+    const errs: { title?: string; dueDate?: string } = {};
     if (!form.title.trim()) errs.title = "Task title cannot be empty.";
     else if (form.title.length > 100) errs.title = "Title must be under 100 characters.";
     if (!form.dueDate) errs.dueDate = "Please choose a due date.";
